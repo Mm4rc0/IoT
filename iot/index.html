@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IoT Store — Home</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="logo_icone.png" alt="Logo" class="logo">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Produtos</a>
+        <a href="support.html">Suporte</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="#" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>INTERNET<br/>DAS COISAS</h1>
+      <p>Conectando dispositivos e soluções inteligentes para casas e indústrias.</p>
+      <a href="products.html" class="cta">Shop Products</a>
+    </div>
+
+    <div class="hero-logo">
+      <!-- Place your real logo image named `your-logo.png` in the project folder -->
+      <img src="logo-wifi.png" alt="Logo with Wi-Fi">
+    </div>
+  </section>
+
+  <!-- PRODUCTS PREVIEW -->
+  <section class="products">
+    <h2>Produtos</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Wireless Router</h3>
+        <p>Great coverage for your home.</p>
+        <span class="price">$149.00</span>
+        <button onclick="addToCart('Wireless Router', 149)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Noise Cancel Headset</h3>
+        <p>Comfort and clear sound.</p>
+        <span class="price">$59.00</span>
+        <button onclick="addToCart('Noise Cancel Headset', 59)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Smart Hub</h3>
+        <p>Connect multiple devices easily.</p>
+        <span class="price">$199.00</span>
+        <button onclick="addToCart('Smart Hub', 199)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 - IoT Store
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>
