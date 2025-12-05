@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IoT Store — Products</title>
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="logo_icone.png" alt="Logo" class="logo">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Produtos</a>
+        <a href="support.html">Suporte</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="#" onclick="openCart()">Carrinho (<span id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1>Produtos</h1>
+    <p>Explore nossos produtos para se conectar.</p>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="electronics">Electronics</option>
+      <option value="headphones">Headphones</option>
+      <option value="games">Games</option>
+      <option value="wifi">Wi-Fi</option>
+    </select>
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="0-50">$0 – $50</option>
+      <option value="50-100">$50 – $100</option>
+      <option value="100-200">$100 – $200</option>
+      <option value="200-9999">$200+</option>
+    </select>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <div id="productList" class="product-grid">
+    <div class="product-card" data-category="electronics" data-price="149">
+      <img src="https://via.placeholder.com/400x240" alt="">
+      <h3>Wireless Router</h3>
+      <p>Coverage for your whole home.</p>
+      <p class="price">$149</p>
+      <button onclick="addToCart('Wireless Router', 149)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="headphones" data-price="59">
+      <img src="https://via.placeholder.com/400x240" alt="">
+      <h3>Noise Cancel Headset</h3>
+      <p>Comfort and clear sound.</p>
+      <p class="price">$59</p>
+      <button onclick="addToCart('Noise Cancel Headset', 59)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="games" data-price="39">
+      <img src="https://via.placeholder.com/400x240" alt="">
+      <h3>Gaming Mouse</h3>
+      <p>Precision and speed for gamers.</p>
+      <p class="price">$39</p>
+      <button onclick="addToCart('Gaming Mouse', 39)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="electronics" data-price="299">
+      <img src="https://via.placeholder.com/400x240" alt="">
+      <h3>Mechanical Keyboard</h3>
+      <p>Durable switches and RGB.</p>
+      <p class="price">$299</p>
+      <button onclick="addToCart('Mechanical Keyboard', 299)">Add to Cart</button>
+    </div>
+
+    <div class="product-card" data-category="wifi" data-price="89">
+      <img src="https://via.placeholder.com/400x240" alt="">
+      <h3>Smart Plug</h3>
+      <p>Control devices remotely.</p>
+      <p class="price">$89</p>
+      <button onclick="addToCart('Smart Plug', 89)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    © 2025 - IoT Store
+  </footer>
+
+  <script src="cart.js"></script>
+  <script src="filter.js"></script>
+</body>
+</html>
